@@ -44,13 +44,25 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:onClick="@{() -> activity.onButtonTambahClick()}"
+                android:id="@+id/buttonTambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+" />
+            <Button
+                android:onClick="@{() -> activity.onButtonKurangClick()}"
+                android:id="@+id/buttonKurang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <Button
-            android:onClick="@{() -> activity.onButtonTambahClick()}"
-            android:id="@+id/buttonTambah"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+" />
+
 
         <TextView
             android:id="@+id/textViewHasil"
@@ -58,10 +70,6 @@
             android:layout_height="wrap_content"
             android:text="0" />
 
-        <Button
-            android:id="@+id/buttonKurang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+
     </androidx.appcompat.widget.LinearLayoutCompat >
 </layout>

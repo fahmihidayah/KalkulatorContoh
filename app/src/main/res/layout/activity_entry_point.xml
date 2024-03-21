@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="activity"
+            type="com.widsons.simpleoldapp.EntryPointActivity" />
+    </data>
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".EntryPointActivity">
+
+        <Button
+            android:onClick="@{() -> activity.onClickToMainActivity()}"
+            android:layout_margin="10dp"
+            android:id="@+id/buttonMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main Activity" />
+
+        <Button
+            android:onClick="@{() -> activity.onClickToOtherMainActivity()}"
+            android:layout_margin="10dp"
+            android:id="@+id/buttonOtherMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other Main Activity" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
