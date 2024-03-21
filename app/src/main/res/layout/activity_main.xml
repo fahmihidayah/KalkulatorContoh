@@ -7,45 +7,53 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
+    <TextView
+        android:text="Kalku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Angka 1" />
 
     <EditText
-        android:id="@+id/editTextTextNumber1"
+        android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number" />
 
     <TextView
-        android:layout_marginTop="10dp"
-        android:id="@+id/textView4"
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Angka 2" />
 
     <EditText
-        android:id="@+id/editTextTextNumber2"
+        android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number" />
 
     <Button
-        android:id="@+id/buttonJumlah"
+        android:onClick="@{() -> activity.tambah()}"
+        android:id="@+id/buttonTambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+" />
 
     <TextView
-        android:textAlignment="center"
-        android:textSize="20dp"
         android:id="@+id/textViewHasil"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0" />
+
+    <Button
+        android:id="@+id/buttonKurang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
 </androidx.appcompat.widget.LinearLayoutCompat >
