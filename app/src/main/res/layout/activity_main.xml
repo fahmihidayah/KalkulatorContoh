@@ -1,59 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".MainActivity">
-    <TextView
-        android:text="Kalku"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.widsons.simpleoldapp.MainActivity" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Angka 1" />
+        <Button
+            android:id="@+id/buttonGoImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To Image" />
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        <Button
+            android:onClick="@{() -> activity.goToRegister()}"
+            android:id="@+id/buttonGoRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go to Register Page" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Angka 2" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
-
-    <Button
-        android:onClick="@{() -> activity.tambah()}"
-        android:id="@+id/buttonTambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+" />
-
-    <TextView
-        android:id="@+id/textViewHasil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0" />
-
-    <Button
-        android:id="@+id/buttonKurang"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-</androidx.appcompat.widget.LinearLayoutCompat >
+        <Button
+            android:id="@+id/buttonGoListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To List View" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
