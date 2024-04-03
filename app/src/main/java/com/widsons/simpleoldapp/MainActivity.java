@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void goToListView() {
+        Intent intent = new Intent(this, ListNameActivity.class);
+        startActivity(intent);
+    }
+
 
 
 }
